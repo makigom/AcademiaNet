@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UI.Web.Site" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="HojaDeEstilo1.css" rel="stylesheet" type="text/css"/>
+    <title>Academia</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="usuarios.aspx">Usuario</a></li>
+        <li><a href="cursos.aspx">Cursos</a></li>
+        <li><a href="comisiones.aspx">Comisiones</a></li>
+        <li><a href="docentescursos.aspx">Docentes Cursos</a></li>
+        <li><a href="especialidades.aspx">Especialidades</a></li>
+        <li><a href="materias.aspx">Materias</a></li>
+        <li><a href="personas.aspx">Personas</a></li>
+        <li><a href="planes.aspx">Planes</a></li>
+        <li><a href="registrosalumnos.aspx">Registrar Alumnos</a></li>
+        <li><a href="salir.aspx">Salir</a></li>
+    </ul>
+    <form id="bodyform" runat="server">
+
+        <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

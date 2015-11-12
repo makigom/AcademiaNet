@@ -1,0 +1,63 @@
+﻿.title{
+    font-family: 'Myriad Pro';
+    font-size: 18pt;
+    font-weight: bold;
+    font-weight: 100;
+
+}
+body {
+    border-color: #c7f2e1;
+    border-style: none;
+    background-color: #ffffff;
+    background-image: url(http://img13.deviantart.net/31cf/i/2015/028/8/6/super_hero_whatsapp_background_by_x_ama-d8fr7iz.jpg);
+    font-family: 'Myriad Pro';
+    font-size: 10pt;
+    font-weight: bold;
+}
+.Grid {background-color: #fff; border: solid 1px #525252; border-collapse:collapse; font-family:'Myriad Pro'; color: #474747;}
+.Grid td {
+      padding: 2px;
+      border: solid 1px #c1c1c1; 
+}
+.Grid th  {
+      padding : 4px 2px;
+      color: #fff;
+      background: #666 url(Images/grid-header.png) repeat-x top;
+      border-left: solid 1px #525252;
+      font-size: 0.9em; }
+.Grid .alt {
+      background: #fcfcfc url(Images/grid-alt.png) repeat-x top; }
+.Grid .pgr {background: #21713d url(Images/grid-pgr.png) repeat-x top; }
+.Grid .pgr table { margin: 3px 0; }
+.Grid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }  
+.Grid .pgr a { color: Gray; text-decoration: none; }
+.Grid .pgr a:hover { color: #000; text-decoration: none; }
+
+.button { 
+  display: inline-block;
+  font-family: 'Myriad Pro';
+  font-size: 10pt;
+  font-weight: bold; 
+}
+
+.menu li{
+    display: inline-block;
+    font-family: 'Myriad Pro';
+    font-size: 12pt;
+    font-weight: bold;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.content {
+    padding: 50px;
+}
+
+#bodyContentPlaceHolder_gridAdictionsPanel {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#bodyContentPlaceHolder_gridAdictionsPanel input{
+    margin: 10px;
+}
