@@ -21,7 +21,7 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
+                    <td style="text-align: right">
             <asp:Label ID="lblUsuario" runat="server" Text="Usuario"></asp:Label>
                     </td>
                     <td>
@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
+                    <td style="text-align: right">
             <asp:Label ID="lblClave" runat="server" Text="Clave"></asp:Label>
                     </td>
                     <td>

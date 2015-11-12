@@ -9,7 +9,6 @@ body {
     border-color: #c7f2e1;
     border-style: none;
     background-color: #ffffff;
-    background-image: url(http://img13.deviantart.net/31cf/i/2015/028/8/6/super_hero_whatsapp_background_by_x_ama-d8fr7iz.jpg);
     font-family: 'Myriad Pro';
     font-size: 10pt;
     font-weight: bold;
@@ -60,4 +59,8 @@ body {
 
 #bodyContentPlaceHolder_gridAdictionsPanel input{
     margin: 10px;
+}
+
+.header {
+    padding:30px;
 }

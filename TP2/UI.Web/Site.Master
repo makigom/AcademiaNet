@@ -6,6 +6,7 @@
     <title>Academia</title>
 </head>
 <body>
+    <header>ACADEMIA</header>
     <ul class="menu">
         <li><a href="usuarios.aspx">Usuario</a></li>
         <li><a href="cursos.aspx">Cursos</a></li>
