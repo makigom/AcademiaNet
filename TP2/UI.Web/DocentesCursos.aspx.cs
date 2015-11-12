@@ -11,6 +11,15 @@ namespace UI.Web
 {
     public partial class DocentesCursos : BasePage
     {
+        protected override void OnLoad(EventArgs e)
+        {
+            this.usuarioIngresado();
+
+            if (Session["rol_usuario"] != "Administrador") { Response.Redirect("/Home.aspx"); }
+
+            base.OnLoad(e);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) LoadGrid();
