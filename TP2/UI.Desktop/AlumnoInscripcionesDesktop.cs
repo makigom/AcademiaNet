@@ -20,8 +20,8 @@ namespace UI.Desktop
 
             CursoLogic cl = new CursoLogic();
             this.cbIDCurso.DataSource = cl.GetAll();
-            this.cbIDCurso.DisplayMember = "id_materia";
-            this.cbIDCurso.ValueMember = "id_curso";
+            this.cbIDCurso.DisplayMember = "id";
+            this.cbIDCurso.ValueMember = "id";
         }
 
         private AlumnoInscripciones _AluInscActual;
@@ -112,10 +112,10 @@ namespace UI.Desktop
 
             foreach (Control c in this.Controls)
             {
-                if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+                if ((c is TextBox || c is ComboBox || c is MaskedTextBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
             }
 
-            if (!(mtbIDAlumno.MaskFull || mtbNota.MaskFull))
+            if (!(mtbIDAlumno.MaskFull || mtbNota.MaskFull)) //ANDA MAL, VER
             {
                 mensaje = "IDAlumno y/o Nota estan vacios.\n" + mensaje;
                 ok = false;

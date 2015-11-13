@@ -15,9 +15,12 @@ namespace UI.Web
         {
             this.usuarioIngresado();
 
-            if (Session["rol_usuario"] != "Administrador" || Session["rol_usuario"] != "Docente") { Response.Redirect("/Home.aspx"); }
-
-            base.OnLoad(e);
+            if (Session["rol_usuario"] == "Administrador" || Session["rol_usuario"] == "Docente") 
+            {
+                base.OnLoad(e);
+            }
+            else { Response.Redirect("/Home.aspx"); }
+           
         }
 
         protected void Page_Load(object sender, EventArgs e)

@@ -187,7 +187,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
                 switch (persona.TiposPersona)
                 {
-                    case "No docente":
+                    case "No Docente":
                         cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = 1;
                         break;
                     case "Alumno":
@@ -234,7 +234,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
                 switch (persona.TiposPersona)
                 {
-                    case "No docente":
+                    case "No Docente":
                         cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = 1;
                         break;
                     case "Alumno":

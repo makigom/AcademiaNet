@@ -40,6 +40,8 @@
         <asp:TextBox ID="repetirClaveTextBox" type="password" TextMode="Password" runat="server">
         </asp:TextBox>
         <br />
+        <asp:Button ID="btnAceptar" CssClass="button" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
+        <asp:Button ID="btnCancelar" CssClass="button" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
     </asp:Panel>
     <asp:Panel ID="gridAdictionsPanel" runat="server">
        <asp:Button ID="btnNuevo" CssClass="button" runat="server" Text="Nuevo" OnClick="btnNuevo_Click"/>
@@ -47,8 +49,7 @@
         <asp:Button ID="btnEliminar" CssClass="button" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"/>
     </asp:Panel>
     <asp:Panel ID="formActionsPanel" runat="server">     
-        <asp:Button ID="btnAceptar" CssClass="button" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
-        <asp:Button ID="btnCancelar" CssClass="button" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+        
     </asp:Panel>
     
     

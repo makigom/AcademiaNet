@@ -6,9 +6,12 @@
     <title>Academia</title>
 </head>
 <body>
-    <header>ACADEMIA</header>
+    <header>Bienvenido al Sistema 3ACADEMIA</header>
     <ul class="menu">
-        <li><a href="usuarios.aspx">Usuario</a></li>
+        <% if (Session["rol_usuario"] == "Administrador"){ %> <li><a href="usuarios.aspx">Usuario</a></li>                                                                                                       
+        <li><a href="alumnoinscripciones.aspx">Alumno Inscripciones</a></li>
+        <li><a href="registraralumnos.aspx">Registrar Alumnos</a></li>
+        <li><a href="reporte.aspx">Reporte Comisiones</a></li>
         <li><a href="cursos.aspx">Cursos</a></li>
         <li><a href="comisiones.aspx">Comisiones</a></li>
         <li><a href="docentescursos.aspx">Docentes Cursos</a></li>
@@ -16,7 +19,10 @@
         <li><a href="materias.aspx">Materias</a></li>
         <li><a href="personas.aspx">Personas</a></li>
         <li><a href="planes.aspx">Planes</a></li>
-        <li><a href="registrosalumnos.aspx">Registrar Alumnos</a></li>
+        <% }%>
+        <% if (Session["rol_usuario"] == "Alumno"){ %> <li><a href="registraralumnos.aspx">Registrar Alumnos</a></li><% }%>
+        <% if (Session["rol_usuario"] == "Docente"){ %> <li><a href="alumnoinscripciones.aspx">Alumno Inscripciones</a></li><% }%>
+        <% if (Session["rol_usuario"] == "No Docente"){ %> <li><a href="reporte.aspx">Reporte Comisiones</a></li><% }%>
         <li><a href="salir.aspx">Salir</a></li>
     </ul>
     <form id="bodyform" runat="server">

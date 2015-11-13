@@ -20,8 +20,8 @@ namespace UI.Desktop
 
             CursoLogic CL = new CursoLogic();
             this.cbIDCurso.DataSource = CL.GetAll(); // no funciona, preguntarle al profesor antes de entregar
-            this.cbIDCurso.DisplayMember = Convert.ToString("id_curso");// el displaymember no esta tomando ningun valor
-            this.cbIDCurso.ValueMember = "id_curso";
+            this.cbIDCurso.DisplayMember = "id";// el displaymember no esta tomando ningun valor
+            this.cbIDCurso.ValueMember = "id";
          
             this.cbTipoCargo.Items.Add("Auxiliar");
             this.cbTipoCargo.Items.Add("Titular");

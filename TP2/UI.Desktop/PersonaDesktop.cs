@@ -156,13 +156,6 @@ namespace UI.Desktop
               ok = false;
           }
 
-          if (this.chkUsuario.Checked)
-          {
-              Usuario user = new Usuario();
-              user.ID = _PersonaActual.ID;
-              Usuarios u = new Usuarios(user);
-              u.ShowDialog();
-          }
           
           if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
           

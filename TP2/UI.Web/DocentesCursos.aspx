@@ -37,6 +37,8 @@
             <asp:ListItem Text="Ayudante" Value="Ayudante"></asp:ListItem>
         </asp:DropDownList>
         <br />
+         <asp:Button ID="btnAceptar" CssClass="button" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
+        <asp:Button ID="btnCancelar" CssClass="button" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
         <!--!
         <asp:TextBox ID="idComisionTextBox" runat="server"></asp:TextBox>
         <br />   -->            
@@ -47,7 +49,6 @@
         <asp:Button ID="btnEliminar" CssClass="button" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"/>
     </asp:Panel>
     <asp:Panel ID="formActionsPanel" runat="server">     
-        <asp:Button ID="btnAceptar" CssClass="button" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
-        <asp:Button ID="btnCancelar" CssClass="button" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+       
     </asp:Panel>
 </asp:Content>

@@ -14,6 +14,13 @@ namespace UI.Web
         private Usuario _UsuarioActual;
         private Persona _PersonaActual;
 
+        protected override void OnLoad(EventArgs e)
+        {
+            Session["nombre_usuario"] = null;
+            Session["id_usuario"] = null;
+            Session["rol_usuario"] = null;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

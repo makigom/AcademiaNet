@@ -209,7 +209,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = alumnoInscripciones.IDAlumno;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = alumnoInscripciones.IDCurso;
                 cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = "Inscripto";
-                cmdSave.Parameters.Add("@nota", SqlDbType.Int).Value = null;
+                cmdSave.Parameters.Add("@nota", SqlDbType.Int).Value = 0;
                 alumnoInscripciones.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
 

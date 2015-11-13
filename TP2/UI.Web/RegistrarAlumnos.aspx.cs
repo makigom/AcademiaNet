@@ -15,14 +15,23 @@ namespace UI.Web
         {
             this.usuarioIngresado();
 
-            if (Session["rol_usuario"] != "Administrador" || Session["rol_usuario"] != "Alumno") { Response.Redirect("/Home.aspx"); }
-
-            base.OnLoad(e);
+            if (Session["rol_usuario"].ToString().Equals("Alumno") || Session["rol_usuario"].ToString().Equals("Administrador")) base.OnLoad(e);
+            else Response.Redirect("/Home.aspx");
+            
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                this.formPanel.Visible = true;
+                this.FormMode = FormModes.Alta;
+                this.ClearForm();
+                this.EnableForm(true);
+                this.Entity = new AlumnoInscripciones();
+                this.LoadForm();            
+                this.LoadEntity(this.Entity);
+            }
         }
 
         AlumnoInscripcionLogic _logic;
@@ -62,14 +71,9 @@ namespace UI.Web
             set { _Entity = value; }
         }
 
-        private void DeleteEntity(int id)
-        {
-            this.Logic.Delete(id);
-        }
 
-        private void LoadForm(int id)
+        private void LoadForm()
         {
-            this.Entity = this.Logic.GetOne(id);
             CursoLogic cl = new CursoLogic();
             this.idCursoddl.DataSource = cl.GetAll();
             this.idCursoddl.DataBind();
@@ -92,16 +96,7 @@ namespace UI.Web
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            switch (this.FormMode)
-            {
-                case FormModes.Alta:
-                    this.Entity = new AlumnoInscripciones();
-                    this.LoadEntity(this.Entity);
-                    this.SaveEntity(this.Entity);
-                    break;
-                default:
-                    break;
-            }
+            this.SaveEntity(this.Entity);
             this.formPanel.Visible = false;
         }
 
@@ -113,10 +108,7 @@ namespace UI.Web
 
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
-            this.formPanel.Visible = true;
-            this.FormMode = FormModes.Alta;
-            this.ClearForm();
-            this.EnableForm(true);
+            
         }
 
         private void ClearForm()

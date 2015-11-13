@@ -43,6 +43,7 @@
             this.mnuPlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegistrarAlumno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -99,7 +100,8 @@
             this.mnuPersonas,
             this.mnuPlanes,
             this.mnuUsuarios,
-            this.mnuRegistrarAlumno});
+            this.mnuRegistrarAlumno,
+            this.mnuReporte});
             this.mnuGestion.Name = "mnuGestion";
             this.mnuGestion.Size = new System.Drawing.Size(59, 20);
             this.mnuGestion.Text = "Gestion";
@@ -184,6 +186,14 @@
             this.mnuRegistrarAlumno.Visible = false;
             this.mnuRegistrarAlumno.Click += new System.EventHandler(this.mnuRegistrarAlumno_Click);
             // 
+            // mnuReporte
+            // 
+            this.mnuReporte.Name = "mnuReporte";
+            this.mnuReporte.Size = new System.Drawing.Size(209, 22);
+            this.mnuReporte.Text = "Reporte";
+            this.mnuReporte.Visible = false;
+            this.mnuReporte.Click += new System.EventHandler(this.mnuReporte_Click);
+            // 
             // mnuAyuda
             // 
             this.mnuAyuda.Name = "mnuAyuda";
@@ -255,5 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
         private System.Windows.Forms.ToolStripMenuItem mnuCerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem mnuRegistrarAlumno;
+        private System.Windows.Forms.ToolStripMenuItem mnuReporte;
     }
 }

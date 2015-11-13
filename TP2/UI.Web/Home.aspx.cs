@@ -7,11 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace UI.Web
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class Home : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            this.usuarioIngresado();
+
+        }
+
     }
 }

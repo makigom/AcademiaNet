@@ -52,5 +52,15 @@ namespace UI.Desktop.Properties {
                 return ((string)(this["ConexionMaki"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MAKIGOM-PC;Initial Catalog=tp2_net;Integrated Security=True")]
+        public string tp2_netMAKIGOM {
+            get {
+                return ((string)(this["tp2_netMAKIGOM"]));
+            }
+        }
     }
 }

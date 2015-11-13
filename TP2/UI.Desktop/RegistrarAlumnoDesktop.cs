@@ -19,11 +19,11 @@ namespace UI.Desktop
             InitializeComponent();
             CursoLogic cl = new CursoLogic();
             this.cbIDCurso.DataSource = cl.GetAll();
-            this.cbIDCurso.DisplayMember = "id_materia";
-            this.cbIDCurso.ValueMember = "id_curso";
+            this.cbIDCurso.DisplayMember = "id";
+            this.cbIDCurso.ValueMember = "id";
         }
 
-        private AlumnoInscripciones _AluInscActual;
+        private AlumnoInscripciones _AluInscActual = new AlumnoInscripciones();
         public AlumnoInscripciones AluInscActual
         {
             get { return _AluInscActual; }
@@ -33,7 +33,8 @@ namespace UI.Desktop
         public override void MapearADatos()
         {
             this.AluInscActual.IDAlumno = Convert.ToInt32(this.mtbIDAlumno.Text);
-            this.AluInscActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;
+            //this.AluInscActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;
+            this.AluInscActual.IDCurso = (int)this.cbIDCurso.SelectedValue;
         }
 
         public override void GuardarCambios()
@@ -85,6 +86,7 @@ namespace UI.Desktop
             if (Validar() == true) //falta validar que vea que si ya se encuentra registrado
             {
                 GuardarCambios();
+                MessageBox.Show("La inscripcion se ha generado correctamente", "Inscripcion a Curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

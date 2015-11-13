@@ -52,9 +52,9 @@ namespace UI.Desktop
                 {
                     this.mnuAlumnosInscripciones.Visible = true;
                 }
-                else if (perUsu.TiposPersona == "No docente")
+                else if (perUsu.TiposPersona == "No Docente")
                 {
-                    //this.mnuReportes.Visible = true;
+                    this.mnuReporte.Visible = true;
                 }
 
                 foreach (ModuloUsuario mu in modusu)
@@ -230,6 +230,13 @@ namespace UI.Desktop
             rad.MdiParent = this;
             rad.Show();
 
+        }
+
+        private void mnuReporte_Click(object sender, EventArgs e)
+        {
+            Reporte rep = new Reporte();
+            rep.MdiParent = this;
+            rep.Show();
         }
 
     }

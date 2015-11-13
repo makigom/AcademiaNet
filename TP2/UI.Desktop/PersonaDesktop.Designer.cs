@@ -51,7 +51,6 @@
             this.mtbFechaNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.ttFechaNacimiento = new System.Windows.Forms.ToolTip(this.components);
             this.mtbLegajo = new System.Windows.Forms.MaskedTextBox();
-            this.chkUsuario = new System.Windows.Forms.CheckBox();
             this.ttTelefono = new System.Windows.Forms.ToolTip(this.components);
             this.ttLegajo = new System.Windows.Forms.ToolTip(this.components);
             this.cbTipoPersona = new System.Windows.Forms.ComboBox();
@@ -251,18 +250,9 @@
             this.mtbLegajo.ValidatingType = typeof(int);
             this.mtbLegajo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbLegajo_MaskInputRejected);
             // 
-            // chkUsuario
-            // 
-            this.chkUsuario.AutoSize = true;
-            this.chkUsuario.Location = new System.Drawing.Point(276, 157);
-            this.chkUsuario.Name = "chkUsuario";
-            this.chkUsuario.Size = new System.Drawing.Size(110, 17);
-            this.chkUsuario.TabIndex = 21;
-            this.chkUsuario.Text = "Gestionar Usuario";
-            this.chkUsuario.UseVisualStyleBackColor = true;
-            // 
             // cbTipoPersona
             // 
+            this.cbTipoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoPersona.FormattingEnabled = true;
             this.cbTipoPersona.Location = new System.Drawing.Point(429, 113);
             this.cbTipoPersona.Name = "cbTipoPersona";
@@ -276,7 +266,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 228);
             this.Controls.Add(this.cbTipoPersona);
-            this.Controls.Add(this.chkUsuario);
             this.Controls.Add(this.mtbLegajo);
             this.Controls.Add(this.mtbFechaNacimiento);
             this.Controls.Add(this.mtbTelefono);
@@ -329,7 +318,6 @@
         private System.Windows.Forms.MaskedTextBox mtbFechaNacimiento;
         private System.Windows.Forms.ToolTip ttFechaNacimiento;
         private System.Windows.Forms.MaskedTextBox mtbLegajo;
-        private System.Windows.Forms.CheckBox chkUsuario;
         private System.Windows.Forms.ToolTip ttTelefono;
         private System.Windows.Forms.ToolTip ttLegajo;
         private System.Windows.Forms.ComboBox cbTipoPersona;

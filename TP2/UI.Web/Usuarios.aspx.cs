@@ -21,6 +21,15 @@ namespace UI.Web
             }
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            this.usuarioIngresado();
+
+            if (Session["rol_usuario"] != "Administrador") { Response.Redirect("/Home.aspx"); }
+
+            base.OnLoad(e);
+        }
+
         private void LoadGrid()
         {
             this.GridView1.DataSource = this.Logic.GetAll();

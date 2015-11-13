@@ -73,6 +73,17 @@
     <Content Include="Reporte.aspx" />
     <Content Include="Salir.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="tp2_netDataSetComisiones.xsc">
+      <DependentUpon>tp2_netDataSetComisiones.xsd</DependentUpon>
+    </Content>
+    <None Include="tp2_netDataSetComisiones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tp2_netDataSetComisiones.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="tp2_netDataSetComisiones.xss">
+      <DependentUpon>tp2_netDataSetComisiones.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -205,6 +216,11 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="tp2_netDataSetComisiones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tp2_netDataSetComisiones.xsd</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

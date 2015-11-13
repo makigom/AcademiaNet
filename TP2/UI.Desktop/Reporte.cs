@@ -19,6 +19,8 @@ namespace UI.Desktop
 
         private void Reporte_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSetPlanes.planes' Puede moverla o quitarla según sea necesario.
+            this.planesTableAdapter.Fill(this.tp2_netDataSetPlanes.planes);
 
             this.reportViewer1.RefreshReport();
         }
